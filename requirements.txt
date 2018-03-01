@@ -1,0 +1,4 @@
+Django==1.11.5
+pytz==2017.2
+telepot==12.3
+urllib3==1.22
