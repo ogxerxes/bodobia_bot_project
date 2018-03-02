@@ -1,6 +1,6 @@
 import re
 from bot.st import strings
-
+from datetime import datetime
 from houses.models import House
 from telepot.namedtuple import ReplyKeyboardMarkup
 from telegram_users.models import TelegramUser
@@ -111,7 +111,7 @@ minimum_house_surface = 20
 
 
 def run(msg, user, matches, bot):  # start adding house
-    print(msg["from"]["id"], "   ", msg["from"]["first_name"] if "first_name" in msg["from"] else "no_first_name",
+    print("[" ,str(datetime.now()) + "]" , "   " ,msg["from"]["id"], "   ", msg["from"]["first_name"] if "first_name" in msg["from"] else "no_first_name",
           "   ", msg["from"]["username"] if "username" in msg["from"] else "no_username", "   ", msg["text"])
 
 
